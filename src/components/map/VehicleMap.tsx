@@ -4,6 +4,9 @@ import { useEffect } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useRealtimeVehicles } from '@/hooks/useRealtimeVehicles';
+import { VehicleMarker } from './VehicleMarker';
+import { MapControls } from './MapControls';
 
 // Configurar ícones padrão do Leaflet
 const DefaultIcon = L.icon({
@@ -18,6 +21,7 @@ const DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function VehicleMap() {
+  const { data: vehicles = [] } = useRealtimeVehicles();
   // Posição inicial solicitada
   const initialPosition: [number, number] = [-8.8921, -36.4972];
   const initialZoom = 13;
@@ -28,7 +32,8 @@ export default function VehicleMap() {
   }, []);
 
   return (
-    <div className="h-screen w-screen z-0">
+    <div className="relative h-screen w-screen z-0">
+      <MapControls vehicles={vehicles} />
       <MapContainer 
         center={initialPosition} 
         zoom={initialZoom} 
@@ -39,7 +44,9 @@ export default function VehicleMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* Futuramente os veículos serão renderizados aqui como Markers */}
+        {vehicles.map(vehicle => (
+          <VehicleMarker key={vehicle.id} vehicle={vehicle} />
+        ))}
       </MapContainer>
     </div>
   );
