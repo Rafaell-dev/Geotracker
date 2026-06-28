@@ -1,5 +1,7 @@
 import { Vehicle } from "@/types/vehicle";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface VehicleDetailsProps {
   vehicle: Vehicle;
@@ -29,6 +31,12 @@ export function VehicleDetails({ vehicle }: VehicleDetailsProps) {
         <span className="font-semibold">Atualizado:</span>
         <span>{formattedDate}</span>
       </div>
+      
+      <Link href={`/history/${vehicle.id}`} className="mt-2 w-full block">
+        <Button variant="outline" className="w-full text-xs" size="sm">
+          Ver Histórico de Rota
+        </Button>
+      </Link>
     </div>
   );
 }

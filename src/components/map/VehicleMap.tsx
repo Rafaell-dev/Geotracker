@@ -7,6 +7,14 @@ import 'leaflet/dist/leaflet.css';
 import { useRealtimeVehicles } from '@/hooks/useRealtimeVehicles';
 import { VehicleMarker } from './VehicleMarker';
 import { MapControls } from './MapControls';
+import { RouteHistory } from '@/types/route';
+import { RoutePolyline } from './RoutePolyline';
+import { RoutePointMarker } from './RoutePoint';
+
+interface VehicleMapProps {
+  historyVehicleId?: string;
+  routeHistory?: RouteHistory;
+}
 
 // Configurar ícones padrão do Leaflet
 const DefaultIcon = L.icon({
@@ -20,10 +28,18 @@ const DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-export default function VehicleMap() {
-  const { data: vehicles = [] } = useRealtimeVehicles();
-  // Posição inicial solicitada
-  const initialPosition: [number, number] = [-8.8921, -36.4972];
+export default function VehicleMap({ historyVehicleId, routeHistory }: VehicleMapProps) {
+  const { data: realtimeVehicles = [] } = useRealtimeVehicles();
+  
+  const vehicles = historyVehicleId 
+    ? realtimeVehicles.filter(v => v.id === historyVehicleId) 
+    : realtimeVehicles;
+
+  // Posição inicial baseada na rota ou posição padrão
+  const initialPosition: [number, number] = routeHistory && routeHistory.points.length > 0 
+    ? [routeHistory.points[0].latitude, routeHistory.points[0].longitude]
+    : [-8.8921, -36.4972];
+    
   const initialZoom = 13;
 
   useEffect(() => {
@@ -33,7 +49,7 @@ export default function VehicleMap() {
 
   return (
     <div className="relative h-screen w-screen z-0">
-      <MapControls vehicles={vehicles} />
+      {!historyVehicleId && <MapControls vehicles={vehicles} />}
       <MapContainer 
         center={initialPosition} 
         zoom={initialZoom} 
@@ -46,6 +62,10 @@ export default function VehicleMap() {
         />
         {vehicles.map(vehicle => (
           <VehicleMarker key={vehicle.id} vehicle={vehicle} />
+        ))}
+        {routeHistory && <RoutePolyline points={routeHistory.points} />}
+        {routeHistory && routeHistory.points.map((p, idx) => (
+          <RoutePointMarker key={idx} point={p} />
         ))}
       </MapContainer>
     </div>

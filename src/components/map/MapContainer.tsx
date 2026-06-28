@@ -1,6 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { RouteHistory } from '@/types/route';
+
+interface MapContainerProps {
+  historyVehicleId?: string;
+  routeHistory?: RouteHistory;
+}
 
 // Carrega o Leaflet dinamicamente, sem Server-Side Rendering
 // Isso é necessário porque o Leaflet usa o objeto window, que não existe no SSR.
@@ -13,6 +19,6 @@ const VehicleMap = dynamic(() => import('./VehicleMap'), {
   ),
 });
 
-export default function MapContainer() {
-  return <VehicleMap />;
+export default function MapContainer(props: MapContainerProps) {
+  return <VehicleMap {...props} />;
 }
