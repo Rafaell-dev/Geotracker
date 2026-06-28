@@ -1,4 +1,4 @@
-export type VehicleStatus = "ONLINE" | "OFFLINE";
+export type VehicleStatus = "ONLINE" | "OFFLINE" | "PARADO" | "ALERTA" | "MANUTENCAO";
 
 export type Vehicle = {
   id: string;
