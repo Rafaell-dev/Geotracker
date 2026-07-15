@@ -10,9 +10,10 @@ interface EditVehicleModalProps {
   isOpen: boolean;
   onClose: () => void;
   vehicle: VehicleFromApi | null;
+  onSuccess?: () => void;
 }
 
-export function EditVehicleModal({ isOpen, onClose, vehicle }: EditVehicleModalProps) {
+export function EditVehicleModal({ isOpen, onClose, vehicle, onSuccess }: EditVehicleModalProps) {
   const { token } = useAuth();
   const queryClient = useQueryClient();
   const [formData, setFormData] = useState({ plate: '', model: '', brand: '', year: '', photo: '' });
@@ -47,6 +48,7 @@ export function EditVehicleModal({ isOpen, onClose, vehicle }: EditVehicleModalP
       queryClient.invalidateQueries({ queryKey: ['vehicles'] });
       setError('');
       setFieldErrors({});
+      onSuccess?.();
       onClose();
     },
     onError: (err: any) => {

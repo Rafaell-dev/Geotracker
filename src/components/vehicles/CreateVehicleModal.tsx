@@ -6,9 +6,10 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 interface CreateVehicleModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess?: () => void;
 }
 
-export function CreateVehicleModal({ isOpen, onClose }: CreateVehicleModalProps) {
+export function CreateVehicleModal({ isOpen, onClose, onSuccess }: CreateVehicleModalProps) {
   const { token } = useAuth();
   const queryClient = useQueryClient();
   const [formData, setFormData] = useState({ plate: '', model: '', brand: '', year: '', photo: '' });
@@ -30,6 +31,7 @@ export function CreateVehicleModal({ isOpen, onClose }: CreateVehicleModalProps)
       setPhotoPreview(null);
       setError('');
       setFieldErrors({});
+      onSuccess?.();
       onClose();
     },
     onError: (err: any) => {

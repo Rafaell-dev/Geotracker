@@ -9,6 +9,7 @@ import { LinkDeviceModal } from '@/components/vehicles/LinkDeviceModal';
 import { CreateVehicleModal } from '@/components/vehicles/CreateVehicleModal';
 import { EditVehicleModal } from '@/components/vehicles/EditVehicleModal';
 import { UnlinkDeviceModal } from '@/components/vehicles/UnlinkDeviceModal';
+import { DeleteVehicleModal } from '@/components/vehicles/DeleteVehicleModal';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import {
   DropdownMenu,
@@ -19,15 +20,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Edit2, MapPin, Link2Off, Link2, MoreHorizontal } from 'lucide-react';
+import { Edit2, MapPin, Link2Off, Link2, MoreHorizontal, Trash2 } from 'lucide-react';
 
 export default function DashboardPage() {
-  const { data: vehicles = [], isLoading } = useRealtimeVehicles();
+  const { data: vehicles = [], isLoading, refetch } = useRealtimeVehicles();
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreateVehicleOpen, setIsCreateVehicleOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isUnlinkModalOpen, setIsUnlinkModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [actionVehicle, setActionVehicle] = useState<any | null>(null);
   const { theme } = useTheme();
 
@@ -145,12 +147,11 @@ export default function DashboardPage() {
                   {vehicles.map((v) => (
                     <TableRow
                       key={v.id}
-                      className="cursor-pointer transition-colors"
+                      className="transition-colors"
                       style={{
                         borderColor: 'var(--gt-border)',
                         backgroundColor: selectedVehicle === v.id ? 'var(--gt-surface-raised)' : undefined,
                       }}
-                      onClick={() => setSelectedVehicle(v.id)}
                       onMouseEnter={e => {
                         if (selectedVehicle !== v.id)
                           (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--gt-surface-raised)';
@@ -184,7 +185,17 @@ export default function DashboardPage() {
                             <DropdownMenuContent align="end" className="w-64 bg-[#1E2230] border-[#2A2D3E] text-slate-300 shadow-xl">
                               <DropdownMenuGroup>
                                 <DropdownMenuLabel>Ações</DropdownMenuLabel>
-                                <DropdownMenuSeparator className="bg-[#2A2D3E]" />
+                                <DropdownMenuSeparator className="bg-[var(--gt-border)]" />
+                                <DropdownMenuItem 
+                                  className="cursor-pointer py-3 text-red-500 focus:bg-red-500/10 focus:text-red-500"
+                                  onClick={() => {
+                                    setActionVehicle(v);
+                                    setIsDeleteModalOpen(true);
+                                  }}
+                                >
+                                  <Trash2 className="mr-2 h-4 w-4" />
+                                  <span>Excluir Veículo</span>
+                                </DropdownMenuItem>
                                 <DropdownMenuItem 
                                   className="cursor-pointer py-3 focus:bg-[#2A2D3E] focus:text-white"
                                   onClick={() => setSelectedVehicle(v.id)}
@@ -229,29 +240,42 @@ export default function DashboardPage() {
           </div>
         </div>
 
+      <CreateVehicleModal 
+        isOpen={isCreateVehicleOpen} 
+        onClose={() => setIsCreateVehicleOpen(false)} 
+        onSuccess={() => refetch()}
+      />
+      
+      <EditVehicleModal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        vehicle={actionVehicle}
+        onSuccess={() => refetch()}
+      />
+      
       <LinkDeviceModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         vehicles={vehicles}
         selectedVehicleId={actionVehicle?.id}
-        onSuccess={(vehicleId) => setSelectedVehicle(vehicleId)}
+        onSuccess={(vehicleId) => {
+          setSelectedVehicle(vehicleId);
+          refetch();
+        }}
       />
-
-      <CreateVehicleModal
-        isOpen={isCreateVehicleOpen}
-        onClose={() => setIsCreateVehicleOpen(false)}
-      />
-
-      <EditVehicleModal
-        isOpen={isEditModalOpen}
-        onClose={() => setIsEditModalOpen(false)}
-        vehicle={actionVehicle}
-      />
-
+      
       <UnlinkDeviceModal
         isOpen={isUnlinkModalOpen}
         onClose={() => setIsUnlinkModalOpen(false)}
         vehicle={actionVehicle}
+        onSuccess={() => refetch()}
+      />
+      
+      <DeleteVehicleModal
+        isOpen={isDeleteModalOpen}
+        onClose={() => setIsDeleteModalOpen(false)}
+        vehicle={actionVehicle}
+        onSuccess={() => refetch()}
       />
     </div>
   );

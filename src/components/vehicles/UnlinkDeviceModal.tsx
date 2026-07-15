@@ -9,9 +9,10 @@ interface UnlinkDeviceModalProps {
   isOpen: boolean;
   onClose: () => void;
   vehicle: VehicleFromApi | null;
+  onSuccess?: () => void;
 }
 
-export function UnlinkDeviceModal({ isOpen, onClose, vehicle }: UnlinkDeviceModalProps) {
+export function UnlinkDeviceModal({ isOpen, onClose, vehicle, onSuccess }: UnlinkDeviceModalProps) {
   const { token } = useAuth();
   const queryClient = useQueryClient();
   const [error, setError] = useState('');
@@ -21,6 +22,7 @@ export function UnlinkDeviceModal({ isOpen, onClose, vehicle }: UnlinkDeviceModa
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['vehicles'] });
       setError('');
+      onSuccess?.();
       onClose();
     },
     onError: (err: any) => {
