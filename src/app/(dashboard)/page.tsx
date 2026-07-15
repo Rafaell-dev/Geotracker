@@ -129,7 +129,7 @@ export default function DashboardPage() {
                   <TableRow style={{ borderColor: 'var(--gt-border)' }}>
                     <TableHead style={{ color: 'var(--gt-text-secondary)' }}>Veículo</TableHead>
                     <TableHead style={{ color: 'var(--gt-text-secondary)' }}>Placa</TableHead>
-                    <TableHead style={{ color: 'var(--gt-text-secondary)' }}>Status</TableHead>
+                    <TableHead style={{ color: 'var(--gt-text-secondary)' }}>Equipamento</TableHead>
                     <TableHead className="w-[100px]" style={{ color: 'var(--gt-text-secondary)' }}>Velocidade</TableHead>
                     <TableHead className="text-right w-[140px]" style={{ color: 'var(--gt-text-secondary)' }}>Ações</TableHead>
                   </TableRow>
@@ -163,13 +163,15 @@ export default function DashboardPage() {
                       <TableCell className="font-medium" style={{ color: 'var(--gt-text-primary)' }}>{v.name}</TableCell>
                       <TableCell style={{ color: 'var(--gt-text-secondary)' }}>{v.plate}</TableCell>
                       <TableCell>
-                        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${
-                          v.status === 'ONLINE'  ? 'bg-green-500/10 text-green-500' :
-                          v.status === 'OFFLINE' ? 'bg-red-500/10 text-red-500'    :
-                          'bg-yellow-500/10 text-yellow-500'
-                        }`}>
-                          {v.status}
-                        </span>
+                        {v.devices && v.devices.length > 0 ? (
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold tracking-wider bg-blue-500/10 text-blue-500 border border-blue-500/20 shadow-sm uppercase">
+                            Vinculado
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold tracking-wider bg-slate-500/10 text-slate-400 border border-slate-500/20 shadow-sm uppercase">
+                            Nenhum
+                          </span>
+                        )}
                       </TableCell>
                       <TableCell style={{ color: 'var(--gt-text-secondary)' }}>{v.speed} km/h</TableCell>
                       <TableCell className="text-right">

@@ -400,6 +400,17 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
     mapInstance.setStyle(newStyle, { diff: true });
   }, [mapInstance, resolvedTheme, mapStyles, clearStyleTimeout]);
 
+  // Sync center and zoom props dynamically if they change
+  useEffect(() => {
+    if (!mapInstance || isControlled || !props.center) return;
+    
+    mapInstance.flyTo({
+      center: props.center,
+      zoom: props.zoom !== undefined ? props.zoom : mapInstance.getZoom(),
+      duration: 1200
+    });
+  }, [mapInstance, isControlled, props.center, props.zoom]);
+
   // Sync projection when the prop changes after mount.
   useEffect(() => {
     if (!mapInstance || !isStyleLoaded || !projection) return;
