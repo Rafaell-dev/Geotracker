@@ -6,7 +6,6 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useRealtimeVehicles } from '@/hooks/useRealtimeVehicles';
 import { VehicleMarker } from './VehicleMarker';
-import { MapControls } from './MapControls';
 import { RouteHistory } from '@/types/route';
 import { RoutePolyline } from './RoutePolyline';
 import { RoutePointMarker } from './RoutePoint';
@@ -49,7 +48,6 @@ export default function VehicleMap({ historyVehicleId, routeHistory }: VehicleMa
 
   return (
     <div className="relative h-screen w-screen z-0">
-      {!historyVehicleId && <MapControls vehicles={vehicles} />}
       <MapContainer 
         center={initialPosition} 
         zoom={initialZoom} 

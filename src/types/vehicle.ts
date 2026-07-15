@@ -4,6 +4,11 @@ export type Vehicle = {
   id: string;
   name: string;
   plate: string;
+  brand: string;
+  model: string;
+  year: number;
+  photo?: string | null;
+  devices: any[];
   latitude: number;
   longitude: number;
   speed: number;

@@ -1,0 +1,1203 @@
+﻿{
+    "success":  true,
+    "total":  63,
+    "data":  [
+                 {
+                     "_id":  "6a50852a4da74a7b1c4d5ddf",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:37:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883328,
+                                 "lng":  -36.46448,
+                                 "altitude":  867.6,
+                                 "speed":  0.11112,
+                                 "satellites":  6,
+                                 "hdop":  1.83
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:37:46.229Z",
+                     "updatedAt":  "2026-07-10T05:37:46.229Z"
+                 },
+                 {
+                     "_id":  "6a50850b4da74a7b1c4d5dde",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:37:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883318,
+                                 "lng":  -36.4645,
+                                 "altitude":  864.5,
+                                 "speed":  0.68524,
+                                 "satellites":  6,
+                                 "hdop":  1.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:37:15.903Z",
+                     "updatedAt":  "2026-07-10T05:37:15.903Z"
+                 },
+                 {
+                     "_id":  "6a5084ed4da74a7b1c4d5ddd",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:36:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883316,
+                                 "lng":  -36.46449,
+                                 "altitude":  867.5,
+                                 "speed":  0.22224,
+                                 "satellites":  6,
+                                 "hdop":  1.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:36:45.913Z",
+                     "updatedAt":  "2026-07-10T05:36:45.913Z"
+                 },
+                 {
+                     "_id":  "6a5084cf4da74a7b1c4d5ddc",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:36:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883324,
+                                 "lng":  -36.46447,
+                                 "altitude":  870.6,
+                                 "speed":  0.6482,
+                                 "satellites":  6,
+                                 "hdop":  1.81
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:36:15.970Z",
+                     "updatedAt":  "2026-07-10T05:36:15.970Z"
+                 },
+                 {
+                     "_id":  "6a5084b14da74a7b1c4d5ddb",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:35:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883334,
+                                 "lng":  -36.46448,
+                                 "altitude":  869.5,
+                                 "speed":  0.40744,
+                                 "satellites":  6,
+                                 "hdop":  1.81
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:35:45.907Z",
+                     "updatedAt":  "2026-07-10T05:35:45.907Z"
+                 },
+                 {
+                     "_id":  "6a5084934da74a7b1c4d5dda",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:35:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883328,
+                                 "lng":  -36.46448,
+                                 "altitude":  867.2,
+                                 "speed":  0.20372,
+                                 "satellites":  6,
+                                 "hdop":  1.8
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:35:15.861Z",
+                     "updatedAt":  "2026-07-10T05:35:15.861Z"
+                 },
+                 {
+                     "_id":  "6a5084754da74a7b1c4d5dd9",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:34:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883324,
+                                 "lng":  -36.46447,
+                                 "altitude":  864.5,
+                                 "speed":  0.2778,
+                                 "satellites":  6,
+                                 "hdop":  1.8
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:34:45.838Z",
+                     "updatedAt":  "2026-07-10T05:34:45.838Z"
+                 },
+                 {
+                     "_id":  "6a5084574da74a7b1c4d5dd8",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:34:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883368,
+                                 "lng":  -36.46445,
+                                 "altitude":  871.9,
+                                 "speed":  0.11112,
+                                 "satellites":  6,
+                                 "hdop":  2.25
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:34:15.836Z",
+                     "updatedAt":  "2026-07-10T05:34:15.836Z"
+                 },
+                 {
+                     "_id":  "6a5084394da74a7b1c4d5dd7",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:33:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883339,
+                                 "lng":  -36.46446,
+                                 "altitude":  872.8,
+                                 "speed":  0.11112,
+                                 "satellites":  6,
+                                 "hdop":  1.79
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:33:45.786Z",
+                     "updatedAt":  "2026-07-10T05:33:45.786Z"
+                 },
+                 {
+                     "_id":  "6a50841b4da74a7b1c4d5dd6",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:33:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883331,
+                                 "lng":  -36.46445,
+                                 "altitude":  876.7,
+                                 "speed":  0.59264,
+                                 "satellites":  5,
+                                 "hdop":  2.28
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:33:15.761Z",
+                     "updatedAt":  "2026-07-10T05:33:15.761Z"
+                 },
+                 {
+                     "_id":  "6a5083fd4da74a7b1c4d5dd5",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:32:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883359,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.7,
+                                 "speed":  0.72228,
+                                 "satellites":  6,
+                                 "hdop":  1.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:32:45.695Z",
+                     "updatedAt":  "2026-07-10T05:32:45.695Z"
+                 },
+                 {
+                     "_id":  "6a5083df4da74a7b1c4d5dd4",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:32:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.883342,
+                                 "lng":  -36.46443,
+                                 "altitude":  881.9,
+                                 "speed":  0.05556,
+                                 "satellites":  6,
+                                 "hdop":  1.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:32:15.990Z",
+                     "updatedAt":  "2026-07-10T05:32:15.990Z"
+                 },
+                 {
+                     "_id":  "6a5083c14da74a7b1c4d5dd3",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:31:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883358,
+                                 "lng":  -36.46441,
+                                 "altitude":  885.4,
+                                 "speed":  0.2778,
+                                 "satellites":  6,
+                                 "hdop":  1.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:31:45.675Z",
+                     "updatedAt":  "2026-07-10T05:31:45.675Z"
+                 },
+                 {
+                     "_id":  "6a5083a34da74a7b1c4d5dd2",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:31:14.000Z",
+                     "gps":  {
+                                 "lat":  -8.88334,
+                                 "lng":  -36.46441,
+                                 "altitude":  885.6,
+                                 "speed":  0.3704,
+                                 "satellites":  6,
+                                 "hdop":  1.76
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:31:15.677Z",
+                     "updatedAt":  "2026-07-10T05:31:15.677Z"
+                 },
+                 {
+                     "_id":  "6a5083854da74a7b1c4d5dd1",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-07-10T05:30:44.000Z",
+                     "gps":  {
+                                 "lat":  -8.883338,
+                                 "lng":  -36.46441,
+                                 "altitude":  887,
+                                 "speed":  0.33336,
+                                 "satellites":  6,
+                                 "hdop":  1.75
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-07-10T05:30:45.608Z",
+                     "updatedAt":  "2026-07-10T05:30:45.608Z"
+                 },
+                 {
+                     "_id":  "6a4011fca2f46ee0183c2ec4",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:10:03.000Z",
+                     "gps":  {
+                                 "lat":  -8.883383,
+                                 "lng":  -36.46438,
+                                 "altitude":  892.6,
+                                 "speed":  0.1852,
+                                 "satellites":  10,
+                                 "hdop":  0.94
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:10:04.534Z",
+                     "updatedAt":  "2026-06-27T18:10:04.534Z"
+                 },
+                 {
+                     "_id":  "6a4011dda2f46ee0183c2ec3",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:09:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883363,
+                                 "lng":  -36.46437,
+                                 "altitude":  894.7,
+                                 "speed":  0.1852,
+                                 "satellites":  9,
+                                 "hdop":  0.95
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:09:33.943Z",
+                     "updatedAt":  "2026-06-27T18:09:33.943Z"
+                 },
+                 {
+                     "_id":  "6a4011c0a2f46ee0183c2ec2",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:09:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883353,
+                                 "lng":  -36.46434,
+                                 "altitude":  903.4,
+                                 "speed":  0.33336,
+                                 "satellites":  10,
+                                 "hdop":  0.86
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:09:04.126Z",
+                     "updatedAt":  "2026-06-27T18:09:04.126Z"
+                 },
+                 {
+                     "_id":  "6a4011a1a2f46ee0183c2ec1",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:08:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883371,
+                                 "lng":  -36.46437,
+                                 "altitude":  894.1,
+                                 "speed":  0.66672,
+                                 "satellites":  10,
+                                 "hdop":  0.88
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:08:33.916Z",
+                     "updatedAt":  "2026-06-27T18:08:33.916Z"
+                 },
+                 {
+                     "_id":  "6a401183a2f46ee0183c2ec0",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:08:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883392,
+                                 "lng":  -36.46441,
+                                 "altitude":  885.3,
+                                 "speed":  0.16668,
+                                 "satellites":  11,
+                                 "hdop":  1.02
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:08:03.857Z",
+                     "updatedAt":  "2026-06-27T18:08:03.857Z"
+                 },
+                 {
+                     "_id":  "6a401165a2f46ee0183c2ebf",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:07:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883401,
+                                 "lng":  -36.46441,
+                                 "altitude":  883.6,
+                                 "speed":  0.2778,
+                                 "satellites":  10,
+                                 "hdop":  0.97
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:07:33.907Z",
+                     "updatedAt":  "2026-06-27T18:07:33.907Z"
+                 },
+                 {
+                     "_id":  "6a401147a2f46ee0183c2ebe",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:07:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.88343,
+                                 "lng":  -36.46442,
+                                 "altitude":  877.5,
+                                 "speed":  0.29632,
+                                 "satellites":  10,
+                                 "hdop":  0.97
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:07:03.862Z",
+                     "updatedAt":  "2026-06-27T18:07:03.862Z"
+                 },
+                 {
+                     "_id":  "6a401129a2f46ee0183c2ebd",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:06:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883435,
+                                 "lng":  -36.46443,
+                                 "altitude":  876.3,
+                                 "speed":  0.12964,
+                                 "satellites":  11,
+                                 "hdop":  1.01
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:06:33.796Z",
+                     "updatedAt":  "2026-06-27T18:06:33.796Z"
+                 },
+                 {
+                     "_id":  "6a40110ba2f46ee0183c2ebc",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:06:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883422,
+                                 "lng":  -36.46442,
+                                 "altitude":  880.4,
+                                 "speed":  0.33336,
+                                 "satellites":  11,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:06:03.796Z",
+                     "updatedAt":  "2026-06-27T18:06:03.796Z"
+                 },
+                 {
+                     "_id":  "6a4010eda2f46ee0183c2ebb",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:05:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883416,
+                                 "lng":  -36.46442,
+                                 "altitude":  883.3,
+                                 "speed":  0.2778,
+                                 "satellites":  10,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:05:33.893Z",
+                     "updatedAt":  "2026-06-27T18:05:33.893Z"
+                 },
+                 {
+                     "_id":  "6a4010cfa2f46ee0183c2eba",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:05:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883413,
+                                 "lng":  -36.46441,
+                                 "altitude":  884.8,
+                                 "speed":  0.14816,
+                                 "satellites":  10,
+                                 "hdop":  0.81
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:05:03.898Z",
+                     "updatedAt":  "2026-06-27T18:05:03.898Z"
+                 },
+                 {
+                     "_id":  "6a4010b1a2f46ee0183c2eb9",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:04:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883406,
+                                 "lng":  -36.46439,
+                                 "altitude":  886.7,
+                                 "speed":  0.01852,
+                                 "satellites":  9,
+                                 "hdop":  1
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:04:33.790Z",
+                     "updatedAt":  "2026-06-27T18:04:33.790Z"
+                 },
+                 {
+                     "_id":  "6a401093a2f46ee0183c2eb8",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:04:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883406,
+                                 "lng":  -36.46437,
+                                 "altitude":  887.8,
+                                 "speed":  0.22224,
+                                 "satellites":  11,
+                                 "hdop":  0.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:04:03.933Z",
+                     "updatedAt":  "2026-06-27T18:04:03.933Z"
+                 },
+                 {
+                     "_id":  "6a401075a2f46ee0183c2eb7",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:03:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883415,
+                                 "lng":  -36.46442,
+                                 "altitude":  878.9,
+                                 "speed":  0.20372,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:03:33.724Z",
+                     "updatedAt":  "2026-06-27T18:03:33.724Z"
+                 },
+                 {
+                     "_id":  "6a401057a2f46ee0183c2eb6",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:03:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883421,
+                                 "lng":  -36.46444,
+                                 "altitude":  877.1,
+                                 "speed":  0.3704,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:03:03.772Z",
+                     "updatedAt":  "2026-06-27T18:03:03.772Z"
+                 },
+                 {
+                     "_id":  "6a401039a2f46ee0183c2eb5",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:02:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883417,
+                                 "lng":  -36.46442,
+                                 "altitude":  877.9,
+                                 "speed":  0.16668,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:02:33.722Z",
+                     "updatedAt":  "2026-06-27T18:02:33.722Z"
+                 },
+                 {
+                     "_id":  "6a40101ba2f46ee0183c2eb4",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:02:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883417,
+                                 "lng":  -36.46442,
+                                 "altitude":  876.5,
+                                 "speed":  0.22224,
+                                 "satellites":  11,
+                                 "hdop":  0.97
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:02:03.660Z",
+                     "updatedAt":  "2026-06-27T18:02:03.660Z"
+                 },
+                 {
+                     "_id":  "6a400ffda2f46ee0183c2eb3",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:01:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883421,
+                                 "lng":  -36.46442,
+                                 "altitude":  876.5,
+                                 "speed":  0.03704,
+                                 "satellites":  11,
+                                 "hdop":  1.01
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:01:33.727Z",
+                     "updatedAt":  "2026-06-27T18:01:33.727Z"
+                 },
+                 {
+                     "_id":  "6a400fdfa2f46ee0183c2eb2",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:01:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883417,
+                                 "lng":  -36.46441,
+                                 "altitude":  876.8,
+                                 "speed":  0.0926,
+                                 "satellites":  10,
+                                 "hdop":  0.81
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:01:03.663Z",
+                     "updatedAt":  "2026-06-27T18:01:03.663Z"
+                 },
+                 {
+                     "_id":  "6a400fc1a2f46ee0183c2eb1",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:00:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883414,
+                                 "lng":  -36.46441,
+                                 "altitude":  878.7,
+                                 "speed":  0.16668,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:00:33.587Z",
+                     "updatedAt":  "2026-06-27T18:00:33.587Z"
+                 },
+                 {
+                     "_id":  "6a400fa3a2f46ee0183c2eb0",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T18:00:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883405,
+                                 "lng":  -36.4644,
+                                 "altitude":  883.4,
+                                 "speed":  0.0926,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T18:00:03.506Z",
+                     "updatedAt":  "2026-06-27T18:00:03.506Z"
+                 },
+                 {
+                     "_id":  "6a400f85a2f46ee0183c2eaf",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:59:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.88341,
+                                 "lng":  -36.46442,
+                                 "altitude":  881.5,
+                                 "speed":  0.16668,
+                                 "satellites":  10,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:59:33.546Z",
+                     "updatedAt":  "2026-06-27T17:59:33.546Z"
+                 },
+                 {
+                     "_id":  "6a400f67a2f46ee0183c2eae",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:59:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.88341,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.7,
+                                 "speed":  0.2778,
+                                 "satellites":  11,
+                                 "hdop":  0.77
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:59:03.755Z",
+                     "updatedAt":  "2026-06-27T17:59:03.755Z"
+                 },
+                 {
+                     "_id":  "6a400f49a2f46ee0183c2ead",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:58:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883409,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.8,
+                                 "speed":  0.2778,
+                                 "satellites":  11,
+                                 "hdop":  0.76
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:58:33.537Z",
+                     "updatedAt":  "2026-06-27T17:58:33.537Z"
+                 },
+                 {
+                     "_id":  "6a400f2ba2f46ee0183c2eac",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:58:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883396,
+                                 "lng":  -36.46442,
+                                 "altitude":  882.3,
+                                 "speed":  0.22224,
+                                 "satellites":  11,
+                                 "hdop":  0.76
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:58:03.482Z",
+                     "updatedAt":  "2026-06-27T17:58:03.482Z"
+                 },
+                 {
+                     "_id":  "6a400f0da2f46ee0183c2eab",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:57:32.000Z",
+                     "gps":  {
+                                 "lat":  -8.883391,
+                                 "lng":  -36.4644,
+                                 "altitude":  885.8,
+                                 "speed":  0.29632,
+                                 "satellites":  10,
+                                 "hdop":  0.96
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:57:33.466Z",
+                     "updatedAt":  "2026-06-27T17:57:33.466Z"
+                 },
+                 {
+                     "_id":  "6a400eefa2f46ee0183c2eaa",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:57:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.88341,
+                                 "lng":  -36.46442,
+                                 "altitude":  881.3,
+                                 "speed":  0.463,
+                                 "satellites":  9,
+                                 "hdop":  0.99
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:57:03.533Z",
+                     "updatedAt":  "2026-06-27T17:57:03.533Z"
+                 },
+                 {
+                     "_id":  "6a400ed0a2f46ee0183c2ea9",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:56:31.000Z",
+                     "gps":  {
+                                 "lat":  -8.883422,
+                                 "lng":  -36.46441,
+                                 "altitude":  878.6,
+                                 "speed":  0.38892,
+                                 "satellites":  10,
+                                 "hdop":  0.79
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:56:32.964Z",
+                     "updatedAt":  "2026-06-27T17:56:32.964Z"
+                 },
+                 {
+                     "_id":  "6a400eb3a2f46ee0183c2ea8",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:56:01.000Z",
+                     "gps":  {
+                                 "lat":  -8.883425,
+                                 "lng":  -36.46442,
+                                 "altitude":  879.1,
+                                 "speed":  1.24084,
+                                 "satellites":  9,
+                                 "hdop":  0.91
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:56:03.012Z",
+                     "updatedAt":  "2026-06-27T17:56:03.012Z"
+                 },
+                 {
+                     "_id":  "6a400e94a2f46ee0183c2ea7",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:55:31.000Z",
+                     "gps":  {
+                                 "lat":  -8.883414,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.2,
+                                 "speed":  0.40744,
+                                 "satellites":  10,
+                                 "hdop":  0.79
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:55:32.998Z",
+                     "updatedAt":  "2026-06-27T17:55:32.998Z"
+                 },
+                 {
+                     "_id":  "6a400e76a2f46ee0183c2ea6",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:55:01.000Z",
+                     "gps":  {
+                                 "lat":  -8.883399,
+                                 "lng":  -36.46443,
+                                 "altitude":  878.1,
+                                 "speed":  0.16668,
+                                 "satellites":  9,
+                                 "hdop":  1.18
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:55:03.000Z",
+                     "updatedAt":  "2026-06-27T17:55:03.000Z"
+                 },
+                 {
+                     "_id":  "6a400e58a2f46ee0183c2ea5",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:54:31.000Z",
+                     "gps":  {
+                                 "lat":  -8.883393,
+                                 "lng":  -36.46442,
+                                 "altitude":  878,
+                                 "speed":  0.72228,
+                                 "satellites":  9,
+                                 "hdop":  0.98
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:54:33.000Z",
+                     "updatedAt":  "2026-06-27T17:54:33.000Z"
+                 },
+                 {
+                     "_id":  "6a400e3ba2f46ee0183c2ea4",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "2026-06-27T17:54:01.000Z",
+                     "gps":  {
+                                 "lat":  -8.883406,
+                                 "lng":  -36.46442,
+                                 "altitude":  876.6,
+                                 "speed":  0.77784,
+                                 "satellites":  10,
+                                 "hdop":  0.79
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:54:03.046Z",
+                     "updatedAt":  "2026-06-27T17:54:03.046Z"
+                 },
+                 {
+                     "_id":  "6a400de5a2f46ee0183c2ea3",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-07T06:08:02.000Z",
+                     "gps":  {
+                                 "lat":  -8.883424,
+                                 "lng":  -36.46445,
+                                 "altitude":  871.8,
+                                 "speed":  0.87044,
+                                 "satellites":  9,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:52:37.087Z",
+                     "updatedAt":  "2026-06-27T17:52:37.087Z"
+                 },
+                 {
+                     "_id":  "6a400dc6a2f46ee0183c2ea2",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-06T21:47:18.000Z",
+                     "gps":  {
+                                 "lat":  -8.883422,
+                                 "lng":  -36.46445,
+                                 "altitude":  877.2,
+                                 "speed":  0.1852,
+                                 "satellites":  11,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:52:06.971Z",
+                     "updatedAt":  "2026-06-27T17:52:06.971Z"
+                 },
+                 {
+                     "_id":  "6a400da8a2f46ee0183c2ea1",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-06T13:27:17.000Z",
+                     "gps":  {
+                                 "lat":  -8.883416,
+                                 "lng":  -36.46444,
+                                 "altitude":  877.6,
+                                 "speed":  0.29632,
+                                 "satellites":  10,
+                                 "hdop":  0.83
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:51:36.960Z",
+                     "updatedAt":  "2026-06-27T17:51:36.960Z"
+                 },
+                 {
+                     "_id":  "6a400d8aa2f46ee0183c2ea0",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-06T05:06:35.000Z",
+                     "gps":  {
+                                 "lat":  -8.883402,
+                                 "lng":  -36.46443,
+                                 "altitude":  877.8,
+                                 "speed":  0.50004,
+                                 "satellites":  10,
+                                 "hdop":  0.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:51:06.957Z",
+                     "updatedAt":  "2026-06-27T17:51:06.957Z"
+                 },
+                 {
+                     "_id":  "6a400d6ca2f46ee0183c2e9f",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-05T20:45:25.000Z",
+                     "gps":  {
+                                 "lat":  -8.883394,
+                                 "lng":  -36.46443,
+                                 "altitude":  877.6,
+                                 "speed":  0.07408,
+                                 "satellites":  11,
+                                 "hdop":  0.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:50:36.796Z",
+                     "updatedAt":  "2026-06-27T17:50:36.796Z"
+                 },
+                 {
+                     "_id":  "6a400d4ea2f46ee0183c2e9e",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-05T12:25:25.000Z",
+                     "gps":  {
+                                 "lat":  -8.8834,
+                                 "lng":  -36.46442,
+                                 "altitude":  877.9,
+                                 "speed":  0.51856,
+                                 "satellites":  11,
+                                 "hdop":  0.83
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:50:06.795Z",
+                     "updatedAt":  "2026-06-27T17:50:06.795Z"
+                 },
+                 {
+                     "_id":  "6a400d30a2f46ee0183c2e9d",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-05T04:05:20.000Z",
+                     "gps":  {
+                                 "lat":  -8.883402,
+                                 "lng":  -36.46442,
+                                 "altitude":  878.7,
+                                 "speed":  0.12964,
+                                 "satellites":  10,
+                                 "hdop":  0.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:49:36.792Z",
+                     "updatedAt":  "2026-06-27T17:49:36.792Z"
+                 },
+                 {
+                     "_id":  "6a400d12a2f46ee0183c2e9c",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-04T19:44:08.000Z",
+                     "gps":  {
+                                 "lat":  -8.883397,
+                                 "lng":  -36.46442,
+                                 "altitude":  879.3,
+                                 "speed":  0.07408,
+                                 "satellites":  10,
+                                 "hdop":  0.83
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:49:06.957Z",
+                     "updatedAt":  "2026-06-27T17:49:06.957Z"
+                 },
+                 {
+                     "_id":  "6a400cf4a2f46ee0183c2e9b",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-04T11:24:06.000Z",
+                     "gps":  {
+                                 "lat":  -8.883402,
+                                 "lng":  -36.46442,
+                                 "altitude":  879.6,
+                                 "speed":  0.66672,
+                                 "satellites":  10,
+                                 "hdop":  0.88
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:48:36.736Z",
+                     "updatedAt":  "2026-06-27T17:48:36.736Z"
+                 },
+                 {
+                     "_id":  "6a400cd6a2f46ee0183c2e9a",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-04T03:02:58.000Z",
+                     "gps":  {
+                                 "lat":  -8.883409,
+                                 "lng":  -36.46442,
+                                 "altitude":  879.5,
+                                 "speed":  0.88896,
+                                 "satellites":  10,
+                                 "hdop":  0.78
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:48:06.644Z",
+                     "updatedAt":  "2026-06-27T17:48:06.644Z"
+                 },
+                 {
+                     "_id":  "6a400cb8a2f46ee0183c2e99",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-03T18:42:52.000Z",
+                     "gps":  {
+                                 "lat":  -8.883413,
+                                 "lng":  -36.46442,
+                                 "altitude":  880.7,
+                                 "speed":  0.03704,
+                                 "satellites":  10,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:47:36.650Z",
+                     "updatedAt":  "2026-06-27T17:47:36.650Z"
+                 },
+                 {
+                     "_id":  "6a400c9aa2f46ee0183c2e98",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-03T10:21:51.000Z",
+                     "gps":  {
+                                 "lat":  -8.883401,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.9,
+                                 "speed":  0.05556,
+                                 "satellites":  10,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:47:06.621Z",
+                     "updatedAt":  "2026-06-27T17:47:06.621Z"
+                 },
+                 {
+                     "_id":  "6a400c7ca2f46ee0183c2e97",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-03T02:01:51.000Z",
+                     "gps":  {
+                                 "lat":  -8.88339,
+                                 "lng":  -36.46443,
+                                 "altitude":  878.7,
+                                 "speed":  0.16668,
+                                 "satellites":  11,
+                                 "hdop":  0.82
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:46:36.573Z",
+                     "updatedAt":  "2026-06-27T17:46:36.573Z"
+                 },
+                 {
+                     "_id":  "6a400c5ea2f46ee0183c2e96",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-02T17:41:50.000Z",
+                     "gps":  {
+                                 "lat":  -8.88341,
+                                 "lng":  -36.46443,
+                                 "altitude":  881.2,
+                                 "speed":  0.1852,
+                                 "satellites":  10,
+                                 "hdop":  0.89
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:46:06.578Z",
+                     "updatedAt":  "2026-06-27T17:46:06.578Z"
+                 },
+                 {
+                     "_id":  "6a400c40a2f46ee0183c2e95",
+                     "device_id":  "TRK0001",
+                     "timestamp":  "1970-01-02T09:21:49.000Z",
+                     "gps":  {
+                                 "lat":  -8.883401,
+                                 "lng":  -36.46443,
+                                 "altitude":  879.4,
+                                 "speed":  0.48152,
+                                 "satellites":  9,
+                                 "hdop":  0.89
+                             },
+                     "sensors":  {
+                                     "temperature":  0,
+                                     "battery_mv":  0
+                                 },
+                     "createdAt":  "2026-06-27T17:45:36.612Z",
+                     "updatedAt":  "2026-06-27T17:45:36.612Z"
+                 }
+             ]
+}

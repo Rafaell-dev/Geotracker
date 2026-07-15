@@ -1,0 +1,698 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API de Rastreamento Veicular IoT",
+    "description": "API para receber dados de telemetria GPS de dispositivos ESP32, gerenciar usu\u00e1rios, ve\u00edculos e dispositivos. Utiliza MongoDB para telemetria e PostgreSQL para cadastros.",
+    "version": "2.0.0"
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Fa\u00e7a login em POST /api/v1/auth/login, copie o token e cole aqui"
+      }
+    },
+    "schemas": {}
+  },
+  "paths": {
+    "/api/v1/telemetry/telemetry": {
+      "post": {
+        "summary": "Receber dados de telemetria do ESP",
+        "tags": [
+          "Telemetria"
+        ],
+        "description": "Recebe o JSON com coordenadas GPS e dados de sensores do ESP e salva no MongoDB",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "device_id",
+                  "gps"
+                ],
+                "properties": {
+                  "device_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "timestamp": {
+                    "type": "number"
+                  },
+                  "gps": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number",
+                        "minimum": -90,
+                        "maximum": 90
+                      },
+                      "lng": {
+                        "type": "number",
+                        "minimum": -180,
+                        "maximum": 180
+                      },
+                      "altitude": {
+                        "type": "number"
+                      },
+                      "speed": {
+                        "type": "number"
+                      },
+                      "satellites": {
+                        "type": "integer"
+                      },
+                      "hdop": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "sensors": {
+                    "type": "object",
+                    "properties": {
+                      "temperature": {
+                        "type": "number"
+                      },
+                      "battery_mv": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "x-api-key",
+            "required": true,
+            "description": "Sua API Key secreta"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Listar dados de telemetria",
+        "tags": [
+          "Telemetria"
+        ],
+        "description": "Retorna os registros de telemetria salvos, com filtro opcional por device_id",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "device_id",
+            "required": false
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 500,
+              "default": 100
+            },
+            "in": "query",
+            "name": "limit",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
+    },
+    "/api/v1/telemetry/telemetry/{device_id}/latest": {
+      "get": {
+        "summary": "Ultimo dado de um dispositivo",
+        "tags": [
+          "Telemetria"
+        ],
+        "description": "Retorna o registro mais recente de telemetria para o device_id informado",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "device_id",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
+    },
+    "/api/v1/telemetry/health": {
+      "get": {
+        "summary": "Health check",
+        "tags": [
+          "Sistema"
+        ],
+        "description": "Retorna o status da API e da conexao com o MongoDB",
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
+    },
+    "/api/v1/users/": {
+      "post": {
+        "summary": "Criar novo usu\u00e1rio",
+        "tags": [
+          "Usu\u00e1rios"
+        ],
+        "description": "Cadastra um novo usu\u00e1rio no sistema. O campo role pode ser \"admin\" ou \"user\"",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "email",
+                  "password",
+                  "role"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 2,
+                    "description": "Nome completo do usu\u00e1rio"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email do usu\u00e1rio (deve ser \u00fanico)"
+                  },
+                  "password": {
+                    "type": "string",
+                    "minLength": 6,
+                    "description": "Senha (m\u00ednimo 6 caracteres)"
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "admin",
+                      "user"
+                    ],
+                    "description": "Papel do usu\u00e1rio no sistema"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "summary": "Fazer login",
+        "tags": [
+          "Autentica\u00e7\u00e3o"
+        ],
+        "description": "Autentica um usu\u00e1rio com email e senha e retorna um token JWT para acessar as rotas protegidas",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email cadastrado"
+                  },
+                  "password": {
+                    "type": "string",
+                    "minLength": 6,
+                    "description": "Senha do usu\u00e1rio"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string",
+                      "description": "Token JWT para autentica\u00e7\u00e3o"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "role": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vehicles/": {
+      "post": {
+        "summary": "Cadastrar ve\u00edculo",
+        "tags": [
+          "Ve\u00edculos"
+        ],
+        "description": "Cadastra um novo ve\u00edculo vinculado a um usu\u00e1rio. Requer autentica\u00e7\u00e3o JWT (Bearer Token)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "plate",
+                  "model",
+                  "brand",
+                  "year",
+                  "userId"
+                ],
+                "properties": {
+                  "plate": {
+                    "type": "string",
+                    "description": "Placa do ve\u00edculo (ex: ABC1D23)"
+                  },
+                  "model": {
+                    "type": "string",
+                    "description": "Modelo do ve\u00edculo (ex: Onix)"
+                  },
+                  "brand": {
+                    "type": "string",
+                    "description": "Marca do ve\u00edculo (ex: Chevrolet)"
+                  },
+                  "year": {
+                    "type": "integer",
+                    "minimum": 1900,
+                    "maximum": 2030,
+                    "description": "Ano de fabrica\u00e7\u00e3o"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "ID do usu\u00e1rio dono do ve\u00edculo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "plate": {
+                      "type": "string"
+                    },
+                    "model": {
+                      "type": "string"
+                    },
+                    "brand": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "userId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/devices/": {
+      "post": {
+        "summary": "Cadastrar dispositivo ESP32",
+        "tags": [
+          "Dispositivos"
+        ],
+        "description": "Cadastra um novo dispositivo IoT (ESP32) no sistema. Requer autentica\u00e7\u00e3o JWT (Bearer Token)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "deviceId"
+                ],
+                "properties": {
+                  "deviceId": {
+                    "type": "string",
+                    "description": "Identificador \u00fanico do dispositivo (ex: TRK0001)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "deviceId": {
+                      "type": "string"
+                    },
+                    "vehicleId": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Autentica\u00e7\u00e3o",
+      "description": "Login e gera\u00e7\u00e3o de token JWT"
+    },
+    {
+      "name": "Usu\u00e1rios",
+      "description": "Cadastro de usu\u00e1rios do sistema"
+    },
+    {
+      "name": "Ve\u00edculos",
+      "description": "Cadastro de ve\u00edculos (requer JWT)"
+    },
+    {
+      "name": "Dispositivos",
+      "description": "Cadastro de dispositivos ESP32 (requer JWT)"
+    },
+    {
+      "name": "Telemetria",
+      "description": "Dados GPS enviados pelo ESP32"
+    },
+    {
+      "name": "Sistema",
+      "description": "Health check e status"
+    }
+  ]
+}
