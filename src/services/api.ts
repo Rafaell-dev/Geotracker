@@ -248,3 +248,55 @@ export async function updateVehicle(id: string, data: any, token: string): Promi
   }
   return response.json();
 }
+
+// ----------------------------------------------------
+// USERS / PROFILE
+// ----------------------------------------------------
+
+export async function getProfile(token: string): Promise<{ id: string, name: string, email: string, role: string }> {
+  const response = await fetch(`${API_BASE_URL}/users/me`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err.error || 'Falha ao buscar perfil');
+  }
+
+  return response.json();
+}
+
+export async function updateProfile(token: string, data: { name?: string, email?: string, password?: string }): Promise<any> {
+  const response = await fetch(`${API_BASE_URL}/users/me`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err.error || 'Falha ao atualizar perfil');
+  }
+
+  return response.json();
+}
+
+export async function deleteProfile(token: string): Promise<void> {
+  const response = await fetch(`${API_BASE_URL}/users/me`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err.error || 'Falha ao excluir conta');
+  }
+}
